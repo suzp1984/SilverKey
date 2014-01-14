@@ -66,4 +66,11 @@ the private key as secret.
 
 The sale machine first generate a hash string according to 
 the identity information(nickname, email address), then
-use private key to encrypt the hash string.
+use private key to encrypt the hash string to get ciphertext.
+I guess the Silver key is append the ciphertext to the hash string.
+
+The verification process is as the following:
+The customer received the Silver key and input the key into software,
+the commercial software decrypt the ciphertext by the public key 
+which stored inside, and then compare the decryption string with the hash
+string.
